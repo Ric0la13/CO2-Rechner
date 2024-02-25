@@ -45,35 +45,82 @@
         <h4>Allgemein</h4>
         <label for="time">Wie lange sind Sie pro Tag durchschnitlich am Smartphone?</label>
         <br />
-        <input type="number" id="time" name="quantity" min="0" max="24" step="0.5"> h
+        <input type="number" id="time" name="time" min="0" max="24" step="0.5"> h pro Tag
         <p></p>
         <fieldset>
             <legend>Achten Sie auf ein nachhaltiges Ladeverhalten?</legend>
-          
             <div>
-              <input type="checkbox" id="battery" name="battery" />
-              <label for="battery">Ich beachte, dass der Akkustand zwischen 20 bis 80 Prozent beträgt</label>
+                <input type="checkbox" id="battery" name="battery" />
+                <label for="battery">Ich beachte, dass der Akkustand zwischen 20 bis 80 Prozent beträgt</label>
             </div>
             <div>
-              <input type="checkbox" id="charge" name="charge" />
-              <label for="charge">Ich verwende weder Wireless noch Fast Charching </label>
+                <input type="checkbox" id="charge" name="charge" />
+                <label for="charge">Ich verwende weder Wireless noch Fast Charching </label>
             </div>
         </fieldset>
         <h4>Streaming</h4>
-        <label for="music">Wie lange hören sie Musik pro Tag?</label>
+        <label for="music">Wie lange hören Sie Musik?</label>
         <br />
-        <input type="number" id="music" name="quantity" min="0" max="600" step="10"> min
+        <input type="number" id="music" name="music" min="0" max="600" step="10"> min pro Tag
         <p></p>
-        <label for="video">Wie lange streamen sie Videos auf Plattformen wie Youtube und Netflix pro Tag?</label>
+        <label for="video">Wie lange streamen Sie Videos auf Plattformen wie Youtube und Netflix?</label>
         <br />
-        <input type="number" id="video" name="quantity" min="0" max="600" step="10"> min
-        <h4>Social-Media SMS/Chatting</h4>
-        <label for="video">Wie lange streamen sie Videos auf Plattformen wie Youtube und Netflix pro Tag?</label>
+        <input type="number" id="video" name="video" min="0" max="600" step="10"> min pro Tag
+        <h4>Social-Media</h4>
+        <label for="chats">Wie viele Nachrichten schreiben Sie auf den Social Media Plattformen?</label>
         <br />
-        <input type="number" id="video" name="quantity" min="0" max="600" step="10"> min
+        <input type="number" id="chats" name="chats" min="0" max="1000" step="10"> pro Tag
+        <p></p>
+        <label for="photos">Wie viel Fotos und Videos verschicken Sie?</label>
+        <br />
+        <input type="number" id="photos" name="photos" min="0" max="1000" step="1"> pro Tag
+        <p></p>
+        <label for="social">Wie lange sind Sie aktiv auf Social Media?</label>
+        <br />
+        <input type="number" id="social" name="social" min="0" max="1000" step="10"> min pro Tag
         <h4>Surfing (KI, Wetter)</h4>
-        <h4>Arbeitswelt</h4>
+        <label for="browsen">Wie viele Suchanfragen tätigen Sie mit einer Suchmaschine pro Tag?</label>
+        <br />
+        <input type="number" id="browsen" name="browsen" min="0" max="1000" step="10"> Anfragen pro Tag
+        <p></p>
+        <label for="ki">Wie viele prompts stellen Sie an eine KI?</label>
+        <br />
+        <input type="number" id="ki" name="ki" min="0" max="1000" step="1"> prompts pro Tag
+        <h4>Business</h4>
+        <fieldset>
+            <legend>Wie viele Mails versenden Sie?</legend>
+            <div>
+                <input type="number" id="mail" name="mail" min="0" max="1000" step="1">
+                <label for="mail">Mails ohne Anhang pro Tag</label>
+            </div>
+            <div>
+                <input type="number" id="mailwa" name="mailwa" min="0" max="1000" step="1">
+                <label for="mailwa">Mails mit Anhang pro Tag</label>
+            </div>
+        </fieldset>
+        <p></p>
+        <label for="videocall">Wie viel Zeit verbringen Sie durchschnitlich in einem Video Call?</label>
+        <br />
+        <input type="number" id="videocall" name="quantity" min="0" max="1000" step="10"> min pro Tag
+        <p></p>
+
+        <label for="call">Wie lange telefonieren Sie?</label>
+        <br />
+        <input type="number" id="call" name="quantity" min="0" max="1000" step="10"> min pro Tag
         <h4>Spiele</h4>
+        <fieldset>
+            <legend>Wie viel Zeit verbringen Sie mit Smartphone Games?</legend>
+            <div>
+                <input type="number" id="gamesoff" name="gamesoff" min="0" max="1000" step="1">
+                <label for="gamesoff">min pro Tag offline</label>
+            </div>
+            <div>
+                <input type="number" id="gameson" name="gameson" min="0" max="1000" step="1">
+                <label for="gameson">min pro Tag online</label>
+            </div>
+        </fieldset>
+        <h4>Cloud</h4>
+
         <h4>sonstige Dienste (Telefon, Health, Navigation, Kamera, Pay)</h4>
 
         <h3>Entsorgung</h3>
