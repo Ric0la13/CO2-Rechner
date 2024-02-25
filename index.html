@@ -41,6 +41,22 @@
             <option value="xiaomi">Xiaomi</option>
             <option value="other">eine andere Marke</option>
         </select>
+        <p></p>
+        <fieldset>
+            <legend>Schalten Sie ihr Smartphone in der Nacht aus?
+            </legend>
+            <div>
+                <input type="radio" id="night" name="night" min="0" max="1000" step="1">
+                <label for="night">Ja</label>
+            </div>
+            <div>
+                <input type="radio" id="nightn" name="night" min="0" max="1000" step="1">
+                <label for="nightn">Nein</label>
+            </div>
+            <div>
+                <input type="radio" id="nightf" name="night" min="0" max="1000" step="1">
+                <label for="nightf">Nein, nur in den Flugmodus</label>
+        </fieldset>
         <h3>Nutzung</h3>
         <h4>Allgemein</h4>
         <label for="time">Wie lange sind Sie pro Tag durchschnitlich am Smartphone?</label>
@@ -101,12 +117,11 @@
         <p></p>
         <label for="videocall">Wie viel Zeit verbringen Sie durchschnitlich in einem Video Call?</label>
         <br />
-        <input type="number" id="videocall" name="quantity" min="0" max="1000" step="10"> min pro Tag
+        <input type="number" id="videocall" name="videocall" min="0" max="1000" step="10"> min pro Tag
         <p></p>
-
         <label for="call">Wie lange telefonieren Sie?</label>
         <br />
-        <input type="number" id="call" name="quantity" min="0" max="1000" step="10"> min pro Tag
+        <input type="number" id="call" name="call" min="0" max="1000" step="10"> min pro Tag
         <h4>Spiele</h4>
         <fieldset>
             <legend>Wie viel Zeit verbringen Sie mit Smartphone Games?</legend>
@@ -119,15 +134,52 @@
                 <label for="gameson">min pro Tag online</label>
             </div>
         </fieldset>
-        <h4>Cloud</h4>
+        <h4>sonstige Dienste</h4>
+        <label for="cloud">Wie viele Daten haben Sie in der Cloud?</label>
+        <br />
+        <input type="number" id="cloud" name="cloud" min="0" max="10000" step="0.5"> GB
+        <p></p>
+        <label for="nav">Wie oft nutzen Sie Navigationsapps</label>
+        <br />
+        <input type="number" id="nav" name="nav" min="0" max="1000" step="10"> mal pro Jahr
+        <p></p>
+        <fieldset>
+            <legend>Tracken Sie Ihre Gesundheitsdaten?</legend>
+            <div>
+                <input type="radio" id="health" name="health" min="0" max="1000" step="1">
+                <label for="health">Ja</label>
+            </div>
+            <div>
+                <input type="radio" id="healthn" name="health" min="0" max="1000" step="1">
+                <label for="healthn">Nein</label>
+            </div>
+        </fieldset>
+        <p></p>
+        <fieldset>
+            <legend>Nutzen Sie das kontaklose Bezahlen?</legend>
+            <div>
+                <input type="radio" id="mpay" name="mpay" min="0" max="1000" step="1">
+                <label for="mpay">Ja</label>
+            </div>
+            <div>
+                <input type="radio" id="mpayn" name="mpay" min="0" max="1000" step="1">
+                <label for="mpayn">Nein</label>
+            </div>
 
-        <h4>sonstige Dienste (Telefon, Health, Navigation, Kamera, Pay)</h4>
-
+        </fieldset>
+        <p></p>
         <h3>Entsorgung</h3>
+        <label for="disposal">Was passiert mit Ihrem kaputten Smartphone?</label>
+        <br />
+        <select id="disposal">
+            <option value="repair">Ich versuche es zu reparieren </option>
+            <option value="sell">Ich verkaufe/verschenke mein Smartphone</option>
+            <option value="keep">Ich versorge es in einer Schublade</option>
+            <option value="recycle">Ich recylcle mein Smartphone</option>
+            <option value="rubish">Ich entsorge mein Handy in der Mülltonne</option>
+        </select>
     </form>
-
     <h2>Resultat</h2>
     <p>Hier wird das Resultat stehen.</p>
 </body>
-
 </html>
