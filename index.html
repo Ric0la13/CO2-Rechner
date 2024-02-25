@@ -12,46 +12,64 @@
     <p>Berechnen Sie mit Hilfe einiger Angaben Ihren persönlichen CO2-Fußabdruck für den jährlichen Verbrauch Ihres
         Smartphones. Diese simple Website sollte möglichst wenig zu Ihrem CO2-Fußabdruck beitragen.</p>
     <h2>Fragen</h2>
-    <h3>Anschaffung</h3>
-    <label for="purchase">Wie oft kaufen Sie ein neues Smartphone?</label>
-    <br />
-    <select id="purchase">
-        <option value="every-year">Jedes Jahr</option>
-        <option value="two-years">Jedes zweite Jahr</option>
-        <option value="three-years">Jedes dritte Jahr</option>
-        <option value="four-years">Jedes vierte Jahr</option>
-        <option value="more-years">seltener</option>
-        <option value="never">nie, ich nutze gebrauchte Smartphones</option>
-    </select>
-    <p></p>
-    <label for="brand">Für welche Marke entscheiden sie sich normalerweise beim Kauf Ihres Smartphone?</label>
-    <br />
-    <select id="brand">
-        <option value="apple">Apple</option>
-        <option value="samsung">Samsung</option>
-        <option value="fairphone">Fairphone</option>
-        <option value="google">Google</option>
-        <option value="huawei">Huawei</option>
-        <option value="oppo">Oppo</option>
-        <option value="samsung">Samsung</option>
-        <option value="shiftphone">Shiftphone</option>
-        <option value="transsion">Transsion</option>
-        <option value="vivo">Vivo</option>
-        <option value="xiaomi">Xiaomi</option>
-        <option value="other">eine andere Marke</option>
-    </select>
-    <h3>Nutzung</h3>
-    <h4>Bildschirmzeit</h4>
-    <h4>Streaming (Musik, Youtube, Videos, Filmchen)</h4>
-    <h4>Social-Media</h4>
-    <h4>Surfing (KI, Wetter)</h4>
-    <h4>Arbeitswelt</h4>
-    <h4>Spiele</h4>
-    <h4>Telefon/SMS/Chatting</h4>
-    <h4>sonstige Dienste (Health, Navigation, Kamera, Pay)</h4>
-    <h4>Ladecycle</h4>
+    <form action="">
+        <h3>Anschaffung</h3>
+        <label for="purchase">Wie oft kaufen Sie ein neues Smartphone?</label>
+        <br />
+        <select id="purchase">
+            <option value="every-year">Jedes Jahr</option>
+            <option value="two-years">Jedes zweite Jahr</option>
+            <option value="three-years">Jedes dritte Jahr</option>
+            <option value="four-years">Jedes vierte Jahr</option>
+            <option value="more-years">seltener</option>
+            <option value="never">nie, ich nutze gebrauchte Smartphones</option>
+        </select>
+        <p></p>
+        <label for="brand">Für welche Marke entscheiden Sie sich normalerweise beim Kauf Ihres Smartphone?</label>
+        <br />
+        <select id="brand">
+            <option value="apple">Apple</option>
+            <option value="samsung">Samsung</option>
+            <option value="fairphone">Fairphone</option>
+            <option value="google">Google</option>
+            <option value="huawei">Huawei</option>
+            <option value="oppo">Oppo</option>
+            <option value="samsung">Samsung</option>
+            <option value="shiftphone">Shiftphone</option>
+            <option value="transsion">Transsion</option>
+            <option value="vivo">Vivo</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="other">eine andere Marke</option>
+        </select>
+        <h3>Nutzung</h3>
+        <h4>Allgemein</h4>
+        <label for="time">Wie lange sind Sie pro Tag durchschnitlich am Smartphone?</label>
+        <br />
+        <input type="number" id="time" name="quantity" min="0" max="24" step="0.5"> h
+        <p></p>
+        <fieldset>
+            <legend>Achten Sie auf ein nachhaltiges Ladeverhalten?</legend>
+          
+            <div>
+              <input type="checkbox" id="battery" name="battery" />
+              <label for="battery">Ich beachte, dass der Akkustand zwischen 20 bis 80 Prozent beträgt</label>
+            </div>
+            <div>
+              <input type="checkbox" id="charge" name="charge" />
+              <label for="charge">Ich verwende weder Wireless noch Fast Charching </label>
+            </div>
+        </fieldset>
+        <h4>Streaming (Musik, Youtube, Videos, Filmchen)</h4>
 
-    <h3>Entsorgung</h3>
+        <h4>Social-Media</h4>
+        <h4>Surfing (KI, Wetter)</h4>
+        <h4>Arbeitswelt</h4>
+        <h4>Spiele</h4>
+        <h4>Telefon/SMS/Chatting</h4>
+        <h4>sonstige Dienste (Health, Navigation, Kamera, Pay)</h4>
+
+        <h3>Entsorgung</h3>
+    </form>
 
     <h2>Resultat</h2>
     <p>Hier wird das Resultat stehen.</p>
