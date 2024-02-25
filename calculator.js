@@ -42,9 +42,7 @@ const entsorgen = 5;
 
 let calculateButton = document.getElementById("calculate-button");
 
-debugger;
 calculateButton.addEventListener("click", event => {
-    debugger;
     alert("alarm");
 });
 
