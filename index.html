@@ -414,7 +414,7 @@
 
         let averageValue = co2usage / averageGermany;
         resultElement.innerHTML = "Ihr persönlicher CO2-Fußabdruck beträgt: " + co2usage / 1000.0
-            + " kg CO₂e.<br />Dies entspricht: " + averageValue + "% des Durschnittverbrauchers in Deutschland.";
+            + " kg CO₂e.<br />Dies entspricht: " + averageValue*100 + "% des Durschnittverbrauchers in Deutschland.";
     });
 </script>
 
