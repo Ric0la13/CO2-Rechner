@@ -181,55 +181,55 @@
     </form>
     <button id="calculate-button">Berechnen</button>
     <h2>Resultat</h2>
-    <p id = "result">Hier wird das Resultat stehen.</p>
+    <p id="result">Hier wird das Resultat stehen.</p>
 </body>
 <script>
-    const anschaffungApple = 5;
-    const anschaffungFairphone = 5;
-    const anschaffungGoogle = 5;
-    const anschaffungHuawei= 5;
-    const anschaffungOppo = 5;
-    const anschaffungSamsung = 5;
-    const anschaffungShiftphone = 5;
-    const anschaffungTranssion = 5;
-    const anschaffungVivo= 5;
-    const anschaffungXiaomi = 5;
-    const anschaffungEineAndereMarke = 5;
-    
-    const unterschiedTag = 0;
-    const unterschiedNacht= 5;
-    const unterschiedFlugmodus = 3;
-    
-    const ladeverhaltenAkkustandschonen = -5;
-    const ladeverhaltenLadeart = -5;
-    const musikStreaming = 5;
-    const videoStreaming = 5;
-    const socialMediaNachrichten = 5;
-    const socialMediaFotos = 5;
-    const socialMediaActivity = 5;
-    const surfingSuchanfragen = 5;
-    const surfingPromtki= 5;
-    const mailOhneAnhang = 5;
-    const mailMitAnhang = 5;
-    const videoCall = 5;
-    const telefonieren = 5;
-    const offlineGames = 5;
-    const onlineGames = 5;
-    const cloud = 5;
-    const navigationsapp = 5;
-    const trackingGesundheitsdaten = 5;
-    const kontaktlosesBezahlen = 5;
-    
-    const reparieren = -5;
-    const verkaufen = -5;
+    const anschaffungApple = 53000;
+    const anschaffungFairphone = 35000;
+    const anschaffungGoogle = 56000;
+    const anschaffungHuawei = 65000;
+    const anschaffungOppo = 50000;
+    const anschaffungSamsung = 57000;
+    const anschaffungShiftphone = 38000;
+    const anschaffungTranssion = 55000;
+    const anschaffungVivo = 55000;
+    const anschaffungXiaomi = 52000;
+    const anschaffungEineAndereMarke = 55000;
+
+    const unterschiedTag = -2000;
+    const unterschiedNacht = 0;
+    const unterschiedFlugmodus = -800;
+
+    const ladeverhaltenAkkustandschonen = -600;
+    const ladeverhaltenLadeart = -1100;
+    const musikStreaming = 1;
+    const videoStreaming = 2.5;
+    const socialMediaNachrichten = 0.03;
+    const socialMediaFotos = 0.4;
+    const socialMediaActivity = 1.5;
+    const surfingSuchanfragen = 0.2;
+    const surfingPromtki = 4.32;
+    const mailOhneAnhang = 4;
+    const mailMitAnhang = 50;
+    const videoCall = 15;
+    const telefonieren = 0.1;
+    const offlineGames = 0.2;
+    const onlineGames = 0.6;
+    const cloud = 500;
+    const navigationsapp = 100;
+    const trackingGesundheitsdaten = 100;
+    const kontaktlosesBezahlen = 200;
+
+    const reparieren = -5000;
+    const verkaufen = -5000;
     const versorgen = 0;
-    const recyclen = -5;
-    const entsorgen = 5;
-    
-    const averageGermany = 10000.0;
-    
+    const recyclen = -2000;
+    const entsorgen = 2000;
+
+    const averageGermany = 70000.0;
+
     let calculateButton = document.getElementById("calculate-button");
-    
+
     calculateButton.addEventListener("click", event => {
         let purchase = document.getElementById("purchase");
         let brand = document.getElementById("brand");
@@ -259,9 +259,9 @@
         let mpay = document.getElementById("mpay");
         let mpayn = document.getElementById("mpayn");
         let disposal = document.getElementById("disposal");
-    
+
         let purchaseValue;
-        switch(purchase.value) {
+        switch (purchase.value) {
             case "every-year":
                 purchaseValue = 1.0;
                 break;
@@ -282,7 +282,7 @@
                 break;
         }
         let brandValue;
-        switch(brand.value) {
+        switch (brand.value) {
             case "apple":
                 brandValue = anschaffungApple;
                 break;
@@ -317,7 +317,7 @@
                 brandValue = anschaffungEineAndereMarke;
                 break;
         }
-    
+
         let nightValue = night.checked;
         let nightnValue = nightn.checked;
         let nightfValue = nightf.checked;
@@ -343,9 +343,9 @@
         let healthnValue = healthn.checked;
         let mpayValue = mpay.checked;
         let mpaynValue = mpayn.checked;
-    
+
         let disposalValue;
-        switch(disposal.value) {
+        switch (disposal.value) {
             case "repair":
                 disposalValue = reparieren;
                 break;
@@ -362,9 +362,9 @@
                 disposalValue = entsorgen;
                 break;
         }
-    
+
         let co2usage = 0;
-    
+
         if (purchaseValue !== 0) {
             co2usage += brandValue / purchaseValue;
         }
@@ -398,23 +398,24 @@
         co2usage += gamesonValue * onlineGames;
         co2usage += cloudValue * cloud;
         co2usage += navValue * navigationsapp;
-    
+
         if (healthValue && !healthnValue) {
             co2usage += trackingGesundheitsdaten;
         }
         if (mpayValue && !mpaynValue) {
             co2usage += kontaktlosesBezahlen;
         }
-    
+
         if (purchaseValue !== 0) {
             co2usage += disposalValue / purchaseValue;
         }
-    
+
         let resultElement = document.getElementById("result");
-    
+
         let averageValue = co2usage / averageGermany;
         resultElement.innerHTML = "Ihr persönlicher CO2-Fußabdruck beträgt: " + co2usage / 1000.0
             + " kg CO₂e.<br />Dies entspricht: " + averageValue + "% des Durschnittverbrauchers in Deutschland.";
     });
 </script>
+
 </html>
