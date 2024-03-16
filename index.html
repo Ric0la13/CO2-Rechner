@@ -226,7 +226,7 @@
     const recyclen = -2000;
     const entsorgen = 2000;
 
-    const averageGermany = 70000.0;
+    const averageGermany = 60000.0;
 
     let calculateButton = document.getElementById("calculate-button");
 
@@ -412,9 +412,10 @@
 
         let resultElement = document.getElementById("result");
 
-        let averageValue = co2usage / averageGermany;
-        resultElement.innerHTML = "Ihr persönlicher CO2-Fußabdruck beträgt: " + co2usage / 1000.0
-            + " kg CO₂e.<br />Dies entspricht: " + averageValue*100 + "% des Durschnittverbrauchers in Deutschland.";
+        let averageValue = ((co2usage / averageGermany)*100).toFixed(2);
+        let co2usageFormatted = (co2usage / 1000.0).toFixed(2);
+        resultElement.innerHTML = "Ihr persönlicher CO2-Fußabdruck beträgt: " + co2usageFormatted
+            + " kg CO₂e.<br />Dies entspricht: " + averageValue + "% des Durschnittverbrauchers in Deutschland.";
     });
 </script>
 
